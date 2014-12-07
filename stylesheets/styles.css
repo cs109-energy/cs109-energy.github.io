@@ -238,7 +238,7 @@ img {
     background:#fff no-repeat 50% 50%;
     position:relative;
     margin:0 auto; /*center-aligned*/
-    box-shadow: 1px 1px 5px #999999;
+    box-shadow: 0px 1px 5px #999999;
     
 }
 
