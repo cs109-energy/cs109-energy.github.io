@@ -60,6 +60,20 @@ Submeters and sensors are installed in these buildings for the measurements of h
 For university facilities, if they can predict the energy use of all campus buildings, they can make plans in advance to optimize the operations of chillers, boilers and energy storage systems. 
 <!--After your page is generated, you can check out the new branch:</p>
 
+<h3>Data Collection</h3>
+<p>
+We obtained hourly weather data from two different sources, a weather station located on Harvard campus and purchased weather data from weather stations located in Cambridge, MA.
+These weather data contains extremely detailed weather datasets including outdoor temperature, humidity, wind speed, wind direction, solar radiation, atmospheric pressure, dehumidification, etc.
+</p>
+<p>
+Hourly and daily energy consumption data for electricity, chilled water and steam were downloaded from Harvard Energy Witness website. These files contains cumulative submeters readings and a lot of information that needed to be clean up.
+</p>
+<p>
+Finally, we estimated the daily occupancy based on academic calendar and assigned a different factor for school days, weekends and holidays.
+</p>
+<p>
+The process of collecting, cleaning and reformating the data collected required extensive work and it is well documented in the ipython notebook <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span>Data Preprocessing</a>.
+</p>
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
 $ git checkout gh-pages
