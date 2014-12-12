@@ -1,0 +1,35 @@
+#Summary
+
+## About the project
+
+Our goal is to <b>use time and weather to predict energy demand of buildings based on historical data</b>. The model will produce accurate energy demand forecasts that will be useful in smart grid technology.  If Harvard University can predict the energy demand of all campus buildings, they will be able to optimize the operations of chillers, boilers and energy storage systems.
+
+There are three types of energy consumption, electricity, chilled water and steam. Chilled water is for cooling and steam is for heating. Chilled water and steam are generated in center plants and are delivered to buildings, just like electricity.
+
+<img src = "Pics/chilled water and steam.jpg">
+Image source: http://www.compression.org/distributed-energy/district-energy-distributed-energy-deschematic-640w/
+
+
+We tried five Machine Learning methods. <b>(1) Linear Regression (LR) (2) Support Vector Regression (SVR) (3) Gaussian Process Regression (GP) (4) Random Forests (RF) and (5) K-Nearest Neighbours (KNN).</b>
+
+
+## Findings from Exploratory Analysis
+
+### Electricity consumption pattern
+
+* Electricity shows a strong periodical pattern. You can clearly see the difference between day and night, weekdays and weekends.
+
+<img src = "Pics/hourly electricity.png">
+
+* It looks like during each semester, electricity use ramps up toward a peak at finals, perhaps representative of studying patterns. The students are working harder and harder toward finals. Then there is a dip after semesters end, inlcuding Christmas vacation. The electricity consumption is relatively low during January and summer terms, and spring break, when campus can be relatively empty. (Text partially contributed by Steven)
+
+<img src = "Pics/Weekly-electricity.jpg" style = "width:900px; height:400px">
+
+### Relationship between Energy Consumption and Features
+
+* Electricity is not co-related with weather data (temperature). The idea of using weather information to predict electricity will NOT work. I think it mostly depends on time/occupancy. But we can still do some pattern exploration to figure out day/night, weekday/weekend, school day/holiday electricity consumption pattern. Actually, we should have noticed that from monthly data.
+
+
+* Chilled water and steam are strongly co-related with temperature and humidity. Daily chilled water and steam consumption have a good linear relationship with cooling and heating degrees. Even simple linear regression might be already quite accurate. However, using with weather information to predict hourly chilled water and steam is not suffient.
+
+<img src="Pics/exploratory analysis.jpg">
