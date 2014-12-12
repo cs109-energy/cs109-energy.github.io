@@ -53,7 +53,7 @@
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h3>
 
 <p>The issue of energy performance of buildings is of great concern to building owners nowadays as it translates to cost. According to the U.S. Department of Energy, buildings consume about 40% of all energy used in the United States. Some states and municipalities have adopted energy savings targets for buildings in an effort to reduce air pollution and climate change in urban areas as well as regionally and globally.<p>
-<p>In this project, we apply seven machine learning models on weather data, time data and historical energy consumption data of Harvard campus buildings to predict future energy consumption. 
+<p>In this project, we apply five machine learning models on weather data, time data and historical energy consumption data of Harvard campus buildings to predict future energy consumption. 
 Submeters and sensors are installed in these buildings for the measurements of hourly and daily consumption of three types of energy: Electricity, Chilled Water and Steam.
 </p>
 <p>Machine learning models produce accurate energy consumption forecasts and they can be used by facilities managers, utility companies and building commissioning projects to implement energy-saving policies. 
@@ -79,7 +79,7 @@ These weather data contains extremely detailed weather datasets including outdoo
 Hourly and daily energy consumption data for electricity, chilled water and steam were downloaded from Harvard Energy Witness website. These files contains cumulative submeters readings and a lot of information that needed to be clean up.
 </p>
 <p>
-Finally, we estimated the daily occupancy based on academic calendar and assigned a different factor for school days, weekends and holidays.
+Finally, we calculated the time data which include the hour of day, day of week, day of year, week of year, coshour=cos(hour of day * 2pi/24), and estimates of daily occupancy based on academic calendar. A different occupancy factor is assigned to school days, weekends and holidays.
 </p>
 <p>
 The process of collecting, cleaning and reformating the data collected required extensive work and it is well documented in the ipython notebook <a id="welcome-to-github-pages" class="anchor" href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Data%20Preprocessing-DEC6.ipynb" aria-hidden="true"><span class="octicon octicon-link"></span>Data Preprocessing</a>.
@@ -87,16 +87,31 @@ The process of collecting, cleaning and reformating the data collected required 
 
 <h3>
 <a id="designer-templates" class="anchor" href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Data%20Preprocessing-DEC6.ipynb" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploratory Data Analysis</h3>
+<p>...</p>
 
-<p>We've .....</p>
+<h3>The Prediction model</h3>
+<p>We collected the data for one building and divided it into training and test sets. For each machine learning model, we trained the model with the train set for predicting energy consumption 
+and used the test set to verify the prediction model. 
+</p>
+<p>
+Once we figure out the most effective machine learning model, the most influential features, the most suitable parameters using the data of 
+one building, this trained model could be used to predict energy consumption of another building of similar type: similar HVAC system, similar room space, room type(office or labs). 
+</p>
 
 <h3>
 <a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Machine learning methods</h3>
 
 <!-- Bin added -->
-<h4> <a href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Prediction-Gaussian%20Process%20Regression.ipynb" target="_blank">Gaussian Process Regression </a></h4>
-
-    
+<h4>
+<ul>
+<li> <a href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Prediction-Gaussian%20Process%20Regression.ipynb" target="_blank">Gaussian Process Regression </a></li>
+<li> <a href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Prediction-Gaussian%20Process%20Regression.ipynb" target="_blank">Linear Regression</a></li>
+<li> <a href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Prediction-Gaussian%20Process%20Regression.ipynb" target="_blank">K Nearest Neighbour Process Regression </a></li>
+<li> <a href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Prediction-Gaussian%20Process%20Regression.ipynb" target="_blank">Random Forest Regression </a></li>
+<li> <a href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Prediction-Gaussian%20Process%20Regression.ipynb" target="_blank">Support Vector Regression </a></li>
+</ul>
+  
+</h4>
 
 <p>......</p>
 
