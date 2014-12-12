@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>CS109 Project - Building Energy Consumption Prediction</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <!-- Bin added -->
+    <link href="javascripts/slider/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="javascripts/slider/js-image-slider.js" type="text/javascript"></script>
+        
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <div class="wrapper">
+        <header>
+            <h1>Prediction of Buildings Energy Consumption</h1>
+            <p><span class = "nowrap"><b>Bin Yan, Constant Wette and Wen Xie</b></span></p>
+            <p><a href="https://github.com/cs109-energy"><small> View the Project on GitHub <b>cs109-energy</b></small></a></p>
+            <ul>
+                <li><a href="http://cs109-energy.github.io/" ><strong>Project Home</strong></a></li>
+                <li><a href="http://nbviewer.ipython.org/github/cs109-energy/cs109-energy.github.io/blob/master/iPython/Data%20Wrangling.ipynb" target="_blank"><strong>Data Wrangling</strong></a></li>
+                <li><a href="exploratory analysis.html"><strong>Exploratory Analysis</strong></a></li>
+                <li><a href="prediction results.html"><strong>Prediction Results</strong></a></li>
+                <li><a href="https://github.com/cs109-energy/cs109-energy.github.io"><strong>iPython Notebook</strong></a></li>
+            </ul>
+        </header>
+      
+      <section>
+          
+          <h1>Prediction Results</h1>
+          
+       <!-- Obsolete>
+          <ul id="tabmenu">
+              <li>
+                  Overview
+                  <ul>
+                      <li><a href="?11">Linear Regression</a>
+                          <ul>
+                              <li><a href="?111">Tab menu 1-1-1</a></li>
+                              <li><a href="?112">Tab menu 1-1-2</a></li>
+                              <li><a href="?113">Tab menu 1-1-3</a></li>
+                              <li><a href="?114">Tab menu 1-1-4</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="#gp">Gaussian Process Regression</a>
+                          <ul>
+                              <li><a href="#gp">Tab menu 1-2-1</a></li>
+                              <li><a href="?122">Tab menu 1-2-2</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="?12">XXX</a>
+                          <ul>
+                              <li><a href="?121">Tab menu 1-2-1</a></li>
+                              <li><a href="?122">Tab menu 1-2-2</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="?12">XXX</a>
+                          <ul>
+                              <li><a href="?121">Tab menu 1-2-1</a></li>
+                              <li><a href="?122">Tab menu 1-2-2</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="?12">XXX</a>
+                          <ul>
+                              <li><a href="?121">Tab menu 1-2-1</a></li>
+                              <li><a href="?122">Tab menu 1-2-2</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="?2">Comparison</a>
+              </li>
+              <li>
+                  <a href="?3">XXX</a>
+                  <ul>
+                      <li><a href="?31">Tab menu 3-1</a></li>
+                      <li><a href="?32">Tab menu 3-2</a></li>
+                  </ul>
+              </li>
+          </ul>
+    <!-->
+    <div class = "image_box">
+    <img src = "images/summary_hourly2.png" >
+    </div>
+    <p> </p>
+    <div class = "image_box">
+    <img src = "images/summary_daily2.png" style = "width:auto; height:400px">
+        </div>
+        <p> </p>
+        <h3> Daily Consumption </h3>
+        
+        <h4> Chilled Water and Steam Prediction </h4>
+        <p> According to exploratory analysis, Daily chilled water and steam consumption have a good linear relationship with cooling and heating degrees. Even simple linear regression could predict daily chilled water and steam consumption quite well. </p>
+        
+        
+        <p> Gaussian Process Regression and Random Forests perform slightly better than other methods in daily chilled water prediction. However, Random Forests prediction used a larger training set and smaller test set. The training test ratio is 2.4 : 1 for Random Forests and 1.1 : 1 for other methods. Therefore, it is not a fair comparison. The accuracy of RF could be lower if using the same training and test set.</p>
+        
+        <h4> Daily Electricity </h4>
+        <p> Daily electricity is not correlated with weather. Occupancy/schedule/study pattern have a large impact on daily electricity.</p>
+        
+        
+        <p> Gaussian Process Regression outperforms other methods.</p>
+        
+        <h3> Hourly Consumption </h3>
+        
+        <p> Hourly precition is much more difficult than daily prediction. First, the data sample is large. Therefore, it is very time-consuming to train a model, expecially for those computationally expensive methods. Second, the noise and variance in hourly consumption are much larger than daily.</p>
+        
+        
+        <p> Gaussian Process Regression did a good job predicting the hourly energy demand.</p>
+        
+        
+        <p> Linear Regression prediction used a larger training set and smaller test set. The training test ratio is 2.8 : 1 ~ 8.7 : 1 for Linear Regression and 1.1 : 1 for Gaussian Process Regression. Therefore, it is not a fair comparison. The accuracy of Linear Regression Prediction for hourly prediction could be lower if using the same training and test set.</p>
+        
+        
+        
+        
+        <h3> The winner is Gaussian Process Regression.</h3>
+        
+        <p> It is no doubt that Gaussian Process Regression outperforms other methods even in an <b><i>unfair</b></i> comparison. However, this does not mean Gaussian Process Regression is superior to other methods in genral. The features in Gaussian Process Regression are different from other methods. Maybe it is because we choose the right features for Gaussian Process regression.</p>
+        
+        <div class = "image_box">
+        <img src="images/gp_daily steam.png" style = "width:900px; height:400px">
+        </div>
+            A sample image of Gaussian Process Regression prediction.
+        
+        
+        
+        
+      </section>
+    </div>
+    
+    <footer>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
+
+
