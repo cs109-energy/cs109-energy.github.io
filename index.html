@@ -28,8 +28,8 @@
         <p><a href="https://github.com/cs109-energy"><small> View the Project on GitHub <b>cs109-energy</b></small></a></p>
         <ul>
           <li><a href="http://cs109-energy.github.io/" ><strong>Project Home</strong></a></li>
-          <li><a href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Data%20Preprocessing-DEC6.ipynb" target="_blank"><strong>Data Wrangling</strong></a></li>
-          <li><a href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Data%20Exploration-DEC6.ipynb" target="_blank"><strong>Exploratory Analysis</strong></a></li>
+          <li><a href="http://nbviewer.ipython.org/github/cs109-energy/cs109-energy.github.io/blob/master/iPython/Data%20Wrangling.ipynb" target="_blank"><strong>Data Wrangling</strong></a></li>
+          <li><a href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Data%20Exploration-DEC6.ipynb" target="_blank"><strong>Data Exploration</strong></a></li>
           <li><a href="prediction results.html"><strong>Prediction Results</strong></a></li>
           <li><a href="https://github.com/cs109-energy/cs109-energy.github.io"><strong>iPython Notebook</strong></a></li>
         </ul>
@@ -42,11 +42,10 @@
                   
                   <img src="images/Monthly consumption.jpg" alt="Monthly Energy Consumption" />
                   <img src="images/hourly electricity.jpg" alt="Hourly Electricity" />
-                  <img src="images/Weekly-electricity.jpg" alt="Weekly Electricity" />
                   <img src="images/gp-hourlyElectricity.jpg" alt="Gaussian Process regression" />
-                  <img src="images/lr.jpg" alt="Linear regression" />
-                  <img src="images/rf.jpg" alt="Random Forests" />
-                  
+                  <img src="images/image-slider-4.jpg" alt="Linear regression" />
+                  <img src="images/image-slider-5.jpg" alt="Other methods" />
+                  <img src="images/image-slider-1.jpg" alt="Other methods" />
               </div>
           </div>
           
@@ -83,13 +82,13 @@ Hourly and daily energy consumption data for electricity, chilled water and stea
 Finally, we calculated the time data which include the hour of day, day of week, day of year, week of year, coshour=cos(hour of day * 2pi/24), and estimates of daily occupancy based on academic calendar. A different occupancy factor is assigned to school days, weekends and holidays.
 </p>
 <p>
-The process of collecting, cleaning and reformating the data collected required extensive work and it is well documented in the ipython notebook <a id="welcome-to-github-pages" class="anchor" href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Data%20Preprocessing-DEC6.ipynb" aria-hidden="true"><span class="octicon octicon-link"></span><b>Data Preprocessing</b></a>.
+The process of collecting, cleaning and reformating the data collected required extensive work and it is well documented in the ipython notebook <a id="welcome-to-github-pages" class="anchor" href="http://nbviewer.ipython.org/github/cs109-energy/cs109-energy.github.io/blob/master/iPython/Data%20Wrangling.ipynb" target="_blank"; aria-hidden="true"><span class="octicon octicon-link"></span><b>Data Wrangling</b></a>.
 </p>
 
 <h3>Exploratory Data Analysis</h3>
 <p>Before designing the energy prediction model, we had analyzed the collected data to discover some interesting findings that we would then explore further.
 </p>
-<p>These preliminary results are described in <a id="designer-templates" class="anchor" href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Data%20Exploration-DEC6.ipynb" aria-hidden="true"><span class="octicon octicon-link"></span><b>Data Exploration</b></a></p>
+<p>These preliminary results are described in <a id="designer-templates" class="anchor" href="http://nbviewer.ipython.org/github/cs109-energy/cs109-energy.github.io/blob/master/iPython/Exploratory%20Analysis.ipynb" target="_blank"; aria-hidden="true"><span class="octicon octicon-link"></span><b>Exploratory Analysis iPython Notebook</b></a></p>
 
 <h3>The Prediction model</h3>
 <p>We collected the data for one building and divided it into training and test sets. For each machine learning model, we trained the model with the train set for predicting energy consumption 
@@ -107,10 +106,10 @@ one building, this trained model could be used to predict energy consumption of 
 <h4>
 <ul>
 <li> <a href="http://nbviewer.ipython.org/github/bin-yan/CS109/blob/master/Prediction-Gaussian%20Process%20Regression.ipynb" target="_blank">Gaussian Process Regression </a></li>
-<li> <a href="http://nbviewer.ipython.org/github/cs109-energy/iPython-Notebook/blob/master/Part%204.1%264.2%20Linear%20Regression%20and%20Support%20Vector%20Regression.ipynb" target="_blank">Linear Regression</a></li>
+<li> <a href="http://nbviewer.ipython.org/github/cs109-energy/cs109-energy.github.io/blob/master/iPython/Linear%20Regression.ipynb" target="_blank">Linear Regression</a></li>
 <li> <a href="http://nbviewer.ipython.org/github/cs109-energy/iPython-Notebook/blob/master/Part%204.4%264.5%20Prediction-Random%20Forests%20and%20K-Nearest%20Neighbours-DEC10.ipynb" target="_blank">K Nearest Neighbour Regression </a></li>
-<li> <a href="http://nbviewer.ipython.org/github/cs109-energy/iPython-Notebook/blob/master/Part%204.4%264.5%20Prediction-Random%20Forests%20and%20K-Nearest%20Neighbours-DEC10.ipynb" target="_blank">Random Forest Regression </a></li>
-<li> <a href="http://nbviewer.ipython.org/github/cs109-energy/iPython-Notebook/blob/master/Part%204.1%264.2%20Linear%20Regression%20and%20Support%20Vector%20Regression.ipynb" target="_blank">Support Vector Regression </a></li>
+<li> <a href="http://nbviewer.ipython.org/github/cs109-energy/cs109-energy.github.io/blob/master/iPython/Random%20Forests.ipynb" target="_blank">Random Forest Regression </a></li>
+<li> <a href="http://nbviewer.ipython.org/github/cs109-energy/cs109-energy.github.io/blob/master/iPython/Support%20Vector%20Regression.ipynb" target="_blank">Support Vector Regression </a></li>
 </ul>
   
 </h4>
