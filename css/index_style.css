@@ -52,7 +52,7 @@ h4 {
 }
 
 p {
-    color: #494949;
+    color: #606060;
     font-size: 15px;
     font-weight: 400;
     line-height: 26px;
@@ -650,15 +650,20 @@ footer .col-md-4 .fa {
 
 footer hr {
   border-color: #121212;
-  margin-top: 62px;
-  margin-bottom: 42px;
+  margin-top: 18px;
 }
 
 footer .footer-copyright {
   padding-top: 12px;
 }
 
+footer p {
+  color: #acacac;
+}
 
+footer a {
+  color:  #bfba55;
+}
 
 /* Back top */
 .go-top {
