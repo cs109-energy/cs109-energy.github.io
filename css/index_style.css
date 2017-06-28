@@ -52,12 +52,13 @@ h4 {
 }
 
 p {
-    color: #777;
+    color: #494949;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 26px;
     letter-spacing: 0.2px;
 }
+
 
 .btn-success:focus {
   background-color: #000;
