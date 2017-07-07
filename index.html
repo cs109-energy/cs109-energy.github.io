@@ -2,36 +2,36 @@
 <html lang="en">
 <head>
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="description" content="Research on building energy demand forecasting using Machine Learning methods.
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Research on building energy demand forecasting using Machine Learning methods.
      Features Gaussian process regression, also includes linear regression, random forests, k-nearest neighbours and support vector regression.
      Three projects posted, a online web tool, comparison of five machine learning techniques when
      predicting energy consumption of a campus building and a visualization written in D3.js.">
-<meta name="keywords" content="machine learning, energy demand forecasting, visualization, energy consumption data, prediction models, HVAC analysis, energy prediction algorithms">
-<meta name="author" content="Bin Yan">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="machine learning, energy demand forecasting, visualization, energy consumption data, prediction models, HVAC analysis, energy prediction algorithms">
+    <meta name="author" content="Bin Yan">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Energy Demand Forecasting using Machine Learning</title>
-<!--Template 2085 Neuron
-http://www.tooplate.com/view/2085-neuron-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>Energy Demand Forecasting using Machine Learning</title>
+    <!--Template 2085 Neuron
+    http://www.tooplate.com/view/2085-neuron-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
-<!-- Main css -->
-<link rel="stylesheet" href="css/index_style.css">
-<link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/index_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
 
-     <script>
-         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-         ga('create', 'UA-58380235-1', 'auto');
-         ga('send', 'pageview');
+        ga('create', 'UA-58380235-1', 'auto');
+        ga('send', 'pageview');
 
-     </script>
+    </script>
 
 </head>
 <body>
@@ -49,176 +49,221 @@ http://www.tooplate.com/view/2085-neuron-->
 <!-- PRE LOADER -->
 
 <div class="preloader">
-     <div class="sk-spinner sk-spinner-wordpress">
-          <span class="sk-inner-circle"></span>
-     </div>
+    <div class="sk-spinner sk-spinner-wordpress">
+        <span class="sk-inner-circle"></span>
+    </div>
 </div>
 
+
 <!-- Navigation section  -->
+<!--
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
 
-<!--<div class="navbar navbar-default navbar-static-top" role="navigation">
-     <div class="container">
-          <div class="navbar-header">
-               &lt;!&ndash; Don't know what's the use of this button&ndash;&gt;
-               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-               </button>
-          </div>
-          <div class="collapse navbar-collapse">
-               <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://scholar.harvard.edu/binyan/" target="_blank">Contact</a></li>
-               </ul>
-          </div>
-
-  </div>
+    </div>
 </div>-->
-
 
 <!-- Home Section -->
 
 <section id="home" class="main-home parallax-section">
-     <div class="overlay"></div>
-     <div id="particles-js"></div>
-     <div class="container">
-          <div class="row">
+    <div class="overlay"></div>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1>Energy Demand Forecasting</h1>
+                <h4>Algorithms, Visualization and Web Apps</h4>
+                <a href="#blog" class="smoothScroll btn btn-default">Discover More</a>
+            </div>
 
-               <div class="col-md-12 col-sm-12">
-                    <h1>Energy Demand Forecasting</h1>
-                    <h4>Algorithms, Visualization and Web Apps</h4>
-                    <a href="#blog" class="smoothScroll btn btn-default">Discover More</a>
-               </div>
-
-          </div>
-     </div>
+        </div>
+    </div>
 </section>
 
 <!-- Blog Section -->
 
 <section id="blog">
-     <div class="container">
-          <div class="row">
+    <div class="container">
+        <div class="row">
 
-               <div class="col-md-offset-1 col-md-10 col-sm-12">
-                    <div class="blog-post-thumb">
-                         <div class="blog-post-image">
-                              <a href="project1.html" target="_blank">
-                                   <img src="images/gp_daily steam.png" class="img-responsive" alt="Blog Image">
-                              </a>
-                         </div>
-                         <div class="blog-post-title">
-                              <h3><a href="project1.html" target="_blank">Prediction of Building Energy Consumption</a></h3>
-                              <h5>A comparison of five machine learning techniques</h5>
-                         </div>
-                         <div class="blog-post-format">
-                              <span> Bin Yan, Constant Wette and Wen Xie </span>
-                              <span><i class="fa fa-date"></i> Dec 18, 2014</span>
-                         </div>
-                         <div class="blog-post-des">
-                              <p> Buildings consume about 40% of the total energy use in the United States. In this project, we apply five machine learning models
-                                   (Gaussian process regression, linear regression, K-Nearest Neighbour, Random Forests and Support Vector regression)
-                                   to predict future energy consumption of an Harvard building. </p>
+            <div class="col-md-offset-1 col-md-10 col-sm-12">
+                <div class="blog-post-thumb">
+                    <div class="blog-post-image">
+                        <a href="project1.html" target="_blank">
+                            <img src="images/gp_daily steam.png" class="img-responsive" alt="Blog Image">
+                        </a>
+                    </div>
+                    <div class="blog-post-title">
+                        <h3><a href="project1.html" target="_blank">Prediction of Building Energy Consumption</a></h3>
+                        <h5>A comparison of five machine learning algorithms</h5>
+                    </div>
+                    <div class="blog-post-format">
+                        <span> Bin Yan, Constant Wette and Wen Xie </span>
+                        <span><i class="fa fa-date"></i> Dec 18, 2014</span>
+                    </div>
+                    <div class="blog-post-des">
+                        <p> Buildings consume about 40% of the total energy use in the United States. In this project, we apply five machine learning models
+                            (Gaussian process regression, linear regression, K-Nearest Neighbour, Random Forests and Support Vector regression)
+                            to predict future energy consumption of an Harvard building. </p>
 
-                              <p> Machine learning models produce accurate energy consumption forecasts and they can be used by facilities managers,
-                                   utility companies and building commissioning projects to implement energy-saving policies.
-                                   For university facilities, if they can predict the energy use of all campus buildings,
-                                   they can make plans in advance to optimize the operations of chillers, boilers and energy storage systems. </p>
+                        <p> Machine learning models produce accurate energy consumption forecasts and they can be used by facilities managers,
+                            utility companies and building commissioning projects to implement energy-saving policies.
+                            For university facilities, if they can predict the energy use of all campus buildings,
+                            they can make plans in advance to optimize the operations of chillers, boilers and energy storage systems. </p>
 
-                             <p><a href="https://scholar.harvard.edu/binyan/contact_owner" target="_blank"><span class="fa fa-envelope-o"></span> Request data</a> for your own research.</p>
-                             <a href="project1.html" target="_blank" class="btn btn-default">More details</a>
-                         </div>
+                        <p><a href="https://scholar.harvard.edu/binyan/contact_owner" target="_blank"><span class="fa fa-envelope-o"></span> Request data</a> for your own research.</p>
+                        <a href="project1.html" target="_blank" class="btn btn-default">More details</a>
+                    </div>
+                </div>
+
+                <div class="blog-post-thumb">
+                    <div class="blog-post-image">
+                        <a href="https://youtu.be/NkETYwz81W8" target="_blank">
+                            <img src="images/gp_web_tool.png" class="img-responsive" alt="Blog Image">
+                        </a>
+                    </div>
+                    <div class="blog-post-title">
+                        <h3><a href="http://harvardcgbc.org/cgbc-launches-online-gaussian-processes-forecasting-tool-to-analyze-building-energy-consumption/" target="_blank">Gaussian Process Forecasting Web Tool</a></h3>
+                    </div>
+                    <div class="blog-post-format">
+                        <span> Bin Yan and Wenbo Shi </span>
+                        <span><i class="fa fa-date"></i> Jan 31, 2017</span>
+                    </div>
+                    <div class="blog-post-des">
+                        <p> As <a href="http://harvardcgbc.org/">Harvard CGBC</a> researchers, we launched a new web app that uses statistical modeling and
+                            historical data to help predict building energy consumption. The Gaussian Processes Forecasting Tool allows users to upload data,
+                            configure features, train/validate a model and make predictions. Users do not need to have any machine learning background.</p>
+                        <p><a href="http://ec2-54-244-44-206.us-west-2.compute.amazonaws.com:9000/help">Read tutorial</a> |
+                            <a href="http://ec2-54-244-44-206.us-west-2.compute.amazonaws.com:9000/model_tD1Hgkmbwh/feature#section-section1" target="_blank">Explore demo</a> |
+                            <a href="https://youtu.be/NkETYwz81W8" target="_blank">Watch video</a> </p>
+                        <a href="http://ec2-54-244-44-206.us-west-2.compute.amazonaws.com:9000/" target="_blank" class="btn btn-default">Go to the tool</a>
+                    </div>
+                </div>
+
+                <div class="blog-post-thumb">
+                    <div class="blog-post-title">
+                        <h3>Data Visualization Projects</h3>
                     </div>
 
-                    <div class="blog-post-thumb">
-                         <div class="blog-post-image">
-                              <a href="https://youtu.be/NkETYwz81W8" target="_blank">
-                                   <img src="images/gp_web_tool.png" class="img-responsive" alt="Blog Image">
-                              </a>
-                         </div>
-                         <div class="blog-post-title">
-                              <h3><a href="http://harvardcgbc.org/cgbc-launches-online-gaussian-processes-forecasting-tool-to-analyze-building-energy-consumption/" target="_blank">Gaussian Process Online Forecasting Tool</a></h3>
-                         </div>
-                         <div class="blog-post-format">
-                              <span> Bin Yan and Wenbo Shi </span>
-                              <span><i class="fa fa-date"></i> Jan 31, 2017</span>
-                         </div>
-                         <div class="blog-post-des">
-                              <p> As <a href="http://harvardcgbc.org/">Harvard CGBC</a> researchers, we launched a new web app that uses statistical modeling and
-                                   historical data to help predict building energy consumption. The Gaussian Processes Forecasting Tool allows users to upload data,
-                                   configure features, train/validate a model and make predictions. Users do not need to have any machine learning background.</p>
-                              <p><a href="http://ec2-54-244-44-206.us-west-2.compute.amazonaws.com:9000/help">Read tutorial</a> |
-                                   <a href="http://ec2-54-244-44-206.us-west-2.compute.amazonaws.com:9000/model_tD1Hgkmbwh/feature#section-section1" target="_blank">Explore demo</a> |
-                                   <a href="https://youtu.be/NkETYwz81W8" target="_blank">Watch video</a> </p>
-                              <a href="http://ec2-54-244-44-206.us-west-2.compute.amazonaws.com:9000/" target="_blank" class="btn btn-default">Go to the tool</a>
-                         </div>
+                    <div class="blog-post-image">
+                        <h4>Some Madness in Sankey...</h4>
+                        <div class="blog-post-format">
+                            <span> Bin Yan</span>
+                            <span><i class="fa fa-date"></i> July 1, 2017</span>
+                        </div>
+                        <a href="https://bl.ocks.org/bin-yan/3072c337862c54fbacf49c503a378421" target="_blank">
+                            <img src="images/sankey.png" class="img-responsive" alt="Blog Image">
+                        </a>
+                    </div>
+                    <div class="blog-post-des">
+                        <p>
+                            I created this <a href="https://bl.ocks.org/bin-yan/3072c337862c54fbacf49c503a378421" target="_blank"> vertical sankey diagram </a>
+                            for Elena Vanz's research on urban sustainability rating systems to explore the relationship between indicators and the themes they express.
+                        </p>
+                        <p> More details can be found in the paper
+                            <a href="https://www.academia.edu/29712829/A_multiscalar_and_multi-thematic_comparative_content_analysis_of_existing_urban_sustainability_rating_systems" target="_blank">
+                                "A multiscalar and multi-thematic comparative content analysis of existing urban sustainability rating systems"</a>.
+                        </p>
                     </div>
 
-
-                    <div class="blog-post-thumb">
-                         <div class="blog-post-image">
-                              <a href="http://bin-yan.github.io/visualization-energy/" target="_blank">
-                                   <img src="images/visualization.png" target="_blank" class="img-responsive" alt="Blog Image">
-                              </a>
-                         </div>
-                         <div class="blog-post-title">
-                              <h3><a href="http://bin-yan.github.io/visualization-energy/" target="_blank">Campus Energy Visualization</a></h3>
-                         </div>
-                         <div class="blog-post-format">
-                              <span>Bin Yan, Bing Wang and Benjamin Norman</a></span>
-                              <span><i class="fa fa-date"></i> May 12, 2015</span>
-                         </div>
-                         <div class="blog-post-des">
-                              <p>
-                                   A visualization that displays the energy consumption of 151 buildings at Harvard written in D3.js. The visualization features
-                                   interactive google map, bar charts and linear regression analysis of monthly building energy consumption.
-                              </p>
-                              <p><a href="https://github.com/bin-yan/visualization-energy" target="_blank" class="fa fa-github"> HTML, Javascript and D3 code</a></p>
-                              <a href="http://bin-yan.github.io/visualization-energy/" target="_blank" class="btn btn-default">Go to visualization</a>
-                         </div>
+                    <div class="blog-post-image">
+                        <h4>Time-series chart with confidence range</h4>
+                        <div class="blog-post-format">
+                            <span> Bin Yan</span>
+                            <span><i class="fa fa-date"></i> July 7, 2017</span>
+                        </div>
+                        <a href="https://bl.ocks.org/bin-yan/b670317d977436003e3453a49f7e6b8d" target="_blank">
+                            <img src="images/time-series.png" class="img-responsive" alt="Blog Image">
+                        </a>
+                    </div>
+                    <div class="blog-post-des">
+                        <p>
+                            I designed this <a href="https://bl.ocks.org/bin-yan/b670317d977436003e3453a49f7e6b8d" target="_blank"> time-series chart </a>
+                            to present gaussian process prediction results. The code is written on top of <a href="https://www.highcharts.com/", target="_blank">highcharts.js</a>.
+                        </p>
+                        <p>
+                            The blue line with small white circles shows the predictive mean values. The semi-transparent blue area shows the 95% confidence range.
+                            The blue dots show the measured values. If the measured value falls out of the predictive range, the dot will turn red.
+                        </p>
                     </div>
 
-               </div>
+                    <div class="blog-post-image">
+                        <h4>Campus Energy Visualization</h4>
+                        <div class="blog-post-format">
+                            <span>Bin Yan, Bing Wang and Benjamin Norman</a></span>
+                            <span><i class="fa fa-date"></i> May 12, 2015</span>
+                        </div>
+                        <a href="http://bin-yan.github.io/visualization-energy/" target="_blank">
+                            <img src="images/visualization.png" target="_blank" class="img-responsive" alt="Blog Image">
+                        </a>
+                    </div>
+                    <div class="blog-post-des">
+                        <p>
+                            <a href="http://bin-yan.github.io/visualization-energy/" target="_blank">A visualization that displays the energy consumption of 151 buildings at Harvard </a>
+                            written in D3.js. The visualization features
+                            interactive google map, bar charts and linear regression analysis of monthly building energy consumption.
+                        </p>
+                        <p><a href="https://github.com/bin-yan/visualization-energy" target="_blank" class="fa fa-github"> HTML, Javascript and D3 code</a></p>
+                        <!--a href="#" target="_blank" class="btn btn-default">More visualizations</a-->
+                    </div>
+                </div>
 
-          </div>
-     </div>
+            </div>
+
+        </div>
+    </div>
 </section>
 
 <!-- Footer Section -->
 
 <footer>
-     <div class="container">
-          <div class="row">
-               <div class="col-md-5 col-md-offset-1 col-sm-6">
-                    <h3>About me</h3>
-                    <p>I am currently a Research Associate at <a href="http://harvardcgbc.org/" target="_blank">Harvard Center for Green Buildings and Cities</a> .
-                         I got my PhD degree at the University of Pennsylvania. Interested in data science and visualization.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1 col-sm-6">
+                <h3>About me</h3>
+                <p>I am currently a Research Associate at <a href="http://harvardcgbc.org/" target="_blank">Harvard Center for Green Buildings and Cities</a> .
+                    I got my PhD degree at the University of Pennsylvania. Interested in data science and visualization.</p>
 
-               </div>
+            </div>
 
-               <div class="col-md-4 col-md-offset-1 col-sm-6">
-                    <h3>Data request</h3>
-                    <p>
-                         I am willing to share all the data in these projects for research and education purposes.
-                         Contact me through <a href="https://scholar.harvard.edu/binyan/contact_owner" target="_blank">Harvard Scholar</a>
-                         for data requests.
-                    </p>
-               </div>
+            <div class="col-md-4 col-md-offset-1 col-sm-6">
+                <h3>Data request</h3>
+                <p>
+                    I am willing to share all the data in these projects for research and education purposes.
+                    Contact me through <a href="https://scholar.harvard.edu/binyan/contact_owner" target="_blank">Harvard Scholar</a>
+                    for data requests.
+                </p>
+            </div>
 
-               <div class="clearfix col-md-12 col-sm-12">
-                    <hr>
-               </div>
+            <div class="clearfix col-md-12 col-sm-12">
+                <hr>
+            </div>
 
-               <div class="col-md-12 col-sm-12">
-                    <ul class="social-icon">
-                         <li><a href="https://www.linkedin.com/in/binyan08/" target="_blank" class="fa fa-linkedin"></a></li>
-                         <li><a href="https://www.researchgate.net/profile/Bin_Yan10" target="_blank" class="fa">Rg</a></li>
-                         <li><a href="https://github.com/bin-yan" target="_blank" class="fa fa-github"></a></li>
-                    </ul>
-               </div>
-               
-          </div>
-     </div>
+            <div class="col-md-12 col-sm-12">
+                <ul class="social-icon">
+                    <li><a href="https://www.linkedin.com/in/binyan08/" target="_blank" class="fa fa-linkedin"></a></li>
+                    <li><a href="https://www.researchgate.net/profile/Bin_Yan10" target="_blank" class="fa">Rg</a></li>
+                    <li><a href="https://github.com/bin-yan" target="_blank" class="fa fa-github"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
 </footer>
 
 <!-- Back top -->

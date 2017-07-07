@@ -199,7 +199,7 @@ a:hover, a:active, a:focus {
 .navbar-default {
     background: #ffffff;
     margin: 0 !important;
-    padding: 18px 0;
+    padding: 8px 0;
 }
 
 .navbar-default .navbar-brand {
@@ -282,7 +282,7 @@ a:hover, a:active, a:focus {
 
 .main-home {
   background: url('../images/home-bg.jpg') no-repeat;
-  height: 100vh;
+  height: 100vh;   /* changed, used to be 100vh  */
 }
 
 .main-about {
@@ -475,6 +475,10 @@ a:hover, a:active, a:focus {
   border-radius: 1px;
 }
 
+.blog-post-image h4 {
+  font-size: 18px;
+}
+
 .blog-post-title a {
   color: #222;
 }
@@ -521,6 +525,7 @@ a:hover, a:active, a:focus {
   border-color: transparent;
   color: #ffffff;
 }
+
 
 .blog-author {
   border-top: 1px solid #f0f0f0;
