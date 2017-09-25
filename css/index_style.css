@@ -33,7 +33,7 @@ a:hover, a:active, a:focus{color:#4d638c;outline:none;}
 @keyframes sk-innerCircle{0%{-webkit-transform:rotate(0);transform:rotate(0);}
 100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}
 }
-.navbar-default{background:#ffffff;margin:0 !important;padding:8px 0;}
+.navbar-default{background:#ffffff;padding:8px 0;}
 .navbar-default .navbar-brand{color:#555;font-family:'Merriweather', serif;font-weight:bold;text-transform:uppercase;letter-spacing:4px;margin:0;}
 .navbar-default .navbar-nav li a{color:#777;font-size:16px;letter-spacing:1px;-webkit-transition:all 0.4s ease-in-out;transition:all 0.4s ease-in-out;padding-right:22px;padding-left:22px;}
 .navbar-default .navbar-nav > li a:hover{color:#bfba55 !important;}
@@ -48,6 +48,27 @@ a:hover, a:active, a:focus{color:#4d638c;outline:none;}
 .navbar-default .navbar-toggle .icon-bar{background:#bfba55;border-color:transparent;}
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus{background-color:transparent;}
+
+.navbar {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: -80px;
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+}
+.navbar.active {
+    margin-top: 0;
+}
+
+@media print {
+    a[href]:after {
+        content: none !important;
+    }
+}
+
 #home{background-size:cover;background-position:center center;color:#ffffff;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:relative;text-align:center;}
 .main-home{background:url('../images/home-bg.jpg') no-repeat;height:100vh;}
 .main-about{background:url('../images/about-bg.jpg') no-repeat;}
